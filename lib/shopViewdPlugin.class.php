@@ -6,7 +6,7 @@ class shopViewdPlugin extends shopPlugin
     {
         $param = waRequest::param();
         waLog::dump($param);
-        if(($param['module'] !== 'frontend') || ($param['action'] !== 'product')) {
+        if (($param['module'] !== 'frontend') || ($param['action'] !== 'product')) {
             return null;
         }
 
@@ -18,14 +18,15 @@ class shopViewdPlugin extends shopPlugin
             return null;
         }
 
-        if(!$product) {
+        if (!$product) {
             return null;
         }
 
         $id = $product['id'];
-        $url = wa()->getRouteUrl('shop/frontend/ping', ['plugin'=>'viewd']);
-        $static_url = wa()->getAppStaticUrl('shop') . 'plugins/viewd/js/viewd.js';
+        $url = wa()->getRouteUrl('shop/frontend/ping', ['plugin' => 'viewd']);
+        $static_url = wa()->getAppStaticUrl('shop') . 'plugins/viewd/js/viewd.' . (waSystemConfig::isDebug() ? '' : 'min') . '.js';
 
+        // @formatter:off
         $js = <<<JS
 (function (callback) {
     if(document.readyState != 'loading') callback();
@@ -38,7 +39,7 @@ class shopViewdPlugin extends shopPlugin
     v.ping('$url');
 });
 JS;
-
+        // @formatter:on
         return "<script src=\"$static_url\" defer></script>\n<script>\n$js\n</script>";
     }
 }
