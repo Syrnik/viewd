@@ -2,10 +2,14 @@
 
 class shopViewdPlugin extends shopPlugin
 {
+    /**
+     *
+     * @return string|null
+     */
     public function hookFrontendHeadProduct()
     {
         $param = waRequest::param();
-        waLog::dump($param);
+//        waLog::dump($param);
         if (($param['module'] !== 'frontend') || ($param['action'] !== 'product')) {
             return null;
         }
@@ -41,5 +45,10 @@ class shopViewdPlugin extends shopPlugin
 JS;
         // @formatter:on
         return "<script src=\"$static_url\" defer></script>\n<script>\n$js\n</script>";
+    }
+
+    public function hookFrontendProduct($product)
+    {
+        return ['block_aux' => shopViewdPluginViewHelper::productViews($product)];
     }
 }
