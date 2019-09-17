@@ -1,4 +1,4 @@
 <?php
 return array (
-  'viewd/*' => 'frontend/',
+  'viewd/ping' => 'frontend/ping',
 );
