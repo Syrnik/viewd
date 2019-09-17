@@ -27,3 +27,19 @@ msgstr ""
 #: /wa-apps/shop/plugins/viewd/templates/plugin.viewd.product.html:1
 msgid "Всего просмотров этой страницы:"
 msgstr ""
+
+#: /wa-apps/shop/plugins/viewd/lib/shopViewdPlugin.class.php:73
+msgid "Просмотры за всё время"
+msgstr ""
+
+#: /wa-apps/shop/plugins/viewd/lib/config/settings.php:6
+msgid "Стандартное отображение на карточке товара"
+msgstr ""
+
+#: /wa-apps/shop/plugins/viewd/lib/config/settings.php:7
+msgid "Использовать хук frontend_product.aux (штатно отображается в боковой колонке) для показа количества просмотров карточки товара. Отключите, если хотите самостоятельно отредактировать шаблон карточки товара и показывать счётчик где-то в другом месте"
+msgstr ""
+
+#: /wa-apps/shop/plugins/viewd/lib/config/settings.php:7
+msgid "Использовать хук frontend_product.block_aux (штатно отображается в боковой колонке) для показа количества просмотров карточки товара. Отключите, если хотите самостоятельно отредактировать шаблон карточки товара и показывать счётчик где-то в другом месте"
+msgstr ""

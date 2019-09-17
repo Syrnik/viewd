@@ -12,7 +12,7 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-Basepath: .\n"
 "Language: ru_RU\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: .\n"
 
@@ -29,4 +29,20 @@ msgstr ""
 
 #: /wa-apps/shop/plugins/viewd/templates/plugin.viewd.product.html:1
 msgid "Всего просмотров этой страницы:"
+msgstr ""
+
+#: /wa-apps/shop/plugins/viewd/lib/shopViewdPlugin.class.php:73
+msgid "Просмотры за всё время"
+msgstr ""
+
+#: /wa-apps/shop/plugins/viewd/lib/config/settings.php:6
+msgid "Стандартное отображение на карточке товара"
+msgstr ""
+
+#: /wa-apps/shop/plugins/viewd/lib/config/settings.php:7
+msgid "Использовать хук frontend_product.aux (штатно отображается в боковой колонке) для показа количества просмотров карточки товара. Отключите, если хотите самостоятельно отредактировать шаблон карточки товара и показывать счётчик где-то в другом месте"
+msgstr "Использовать хук <b>frontend_product.aux</b> (штатно отображается в боковой колонке) для показа количества просмотров карточки товара.<br>Отключите, если хотите самостоятельно отредактировать шаблон карточки товара и показывать счётчик где-то в другом месте"
+
+#: /wa-apps/shop/plugins/viewd/lib/config/settings.php:7
+msgid "Использовать хук frontend_product.block_aux (штатно отображается в боковой колонке) для показа количества просмотров карточки товара. Отключите, если хотите самостоятельно отредактировать шаблон карточки товара и показывать счётчик где-то в другом месте"
 msgstr ""
