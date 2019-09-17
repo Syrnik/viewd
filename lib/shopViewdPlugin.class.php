@@ -56,6 +56,10 @@ JS;
      */
     public function hookFrontendProduct($product)
     {
+        if(!$this->getSettings('frontend_product')) {
+            return null;
+        }
+
         return ['block_aux' => shopViewdPluginViewHelper::productViews($product)];
     }
 
@@ -70,8 +74,10 @@ JS;
         if(!is_array($product) && !($product instanceof ArrayAccess)) {
             return null;
         }
+
         $localized_views_total = _wp('Просмотры за всё время');
         $total_views = (int)ifset($product, 'total_views', 0);
+
         $js = <<<JS
 (function(jq) {
     var row = '<tr><td>$localized_views_total</td><td class="align-right nowrap"><strong class="s-target s-last-month">$total_views</strong><strong class="s-target s-forecast hidden" data-hidden="1">0</strong></td></tr>';
