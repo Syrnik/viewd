@@ -6,6 +6,7 @@ return array(
     'vendor'   => '670917',
     'handlers' =>
         array(
+            'backend_product'  => 'hookBackendProduct',
             'frontend_head'    => 'hookFrontendHeadProduct',
             'frontend_product' => 'hookFrontendProduct'
         ),
