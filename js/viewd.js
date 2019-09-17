@@ -4,8 +4,18 @@ function ViewdPlugin(id, type) {
 
     var _pong = false;
 
+    function checkCookie() {
+        var enabled = navigator.cookieEnabled;
+        if(!enabled) {
+            document.cookie = 'testcookie';
+            enabled = document.cookie.indexOf('testcookie') !== -1;
+        }
+
+        return enabled;
+    }
+
     this.ping = function(url) {
-        if(_pong) return;
+        if(_pong || !checkCookie()) return;
         var that = this;
         var xhr= new XMLHttpRequest();
         xhr.open('POST', url, true);
