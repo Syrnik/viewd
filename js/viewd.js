@@ -1,3 +1,7 @@
+/**
+ * @copyright Syrnik.Com, 2019
+ * @author Serge Rodovnichenko, <serge@syrnik.com>
+ */
 function ViewdPlugin(id, type) {
     this.type = type || 'product';
     this.id = id;
