@@ -29,7 +29,7 @@ class shopViewdPlugin extends shopPlugin
 
         $id = $product['id'];
         $url = wa()->getRouteUrl('shop/frontend/ping', ['plugin' => 'viewd']);
-        $static_url = wa()->getAppStaticUrl('shop') . 'plugins/viewd/js/viewd.' . (waSystemConfig::isDebug() ? '' : 'min') . '.js';
+        $static_url = wa()->getAppStaticUrl('shop') . 'plugins/viewd/js/viewd' . (waSystemConfig::isDebug() ? '' : '.min') . '.js';
 
         // @formatter:off
         $js = <<<JS
