@@ -1,16 +1,24 @@
 <?php
+/**
+ * @author Serge Rodovnichenko <serge@syrnik.com>
+ * @copyright Serge Rodovnichenko, 2019-2021
+ * @license Webasyst
+ */
 
+/**
+ * Main plugin class
+ */
 class shopViewdPlugin extends shopPlugin
 {
     /**
      * Handler for frontend_head hook
      *
      * @return string|null
+     * @throws waException
      */
-    public function hookFrontendHeadProduct()
+    public function hookFrontendHeadProduct(): ?string
     {
         $param = waRequest::param();
-//        waLog::dump($param);
         if (($param['module'] !== 'frontend') || ($param['action'] !== 'product')) {
             return null;
         }
@@ -54,9 +62,9 @@ JS;
      * @param shopProduct|array $product
      * @return array
      */
-    public function hookFrontendProduct($product)
+    public function hookFrontendProduct($product): ?array
     {
-        if(!$this->getSettings('frontend_product')) {
+        if (!$this->getSettings('frontend_product')) {
             return null;
         }
 
@@ -68,10 +76,11 @@ JS;
      *
      * @param $product
      * @return array|null
+     * @throws waException
      */
-    public function hookBackendProduct(&$product)
+    public function hookBackendProduct(&$product): ?array
     {
-        if(!is_array($product) && !($product instanceof ArrayAccess)) {
+        if (!is_array($product) && !($product instanceof ArrayAccess)) {
             return null;
         }
 
@@ -85,6 +94,6 @@ JS;
 })(jQuery)
 JS;
 
-        return ['toolbar_section'=>"<script>\n$js\n</script>"];
+        return ['toolbar_section' => "<script>\n$js\n</script>"];
     }
 }
