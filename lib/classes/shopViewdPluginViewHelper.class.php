@@ -1,17 +1,24 @@
 <?php
 /**
  * @author Serge Rodovnichenko <serge@syrnik.com>
- * @copyright Serge Rodovnichenko, 2019
- * @license
+ * @copyright Serge Rodovnichenko, 2019-2021
+ * @license Webasyst
  */
 
-class shopViewdPluginViewHelper
+/**
+ * Class shopViewdPluginViewHelper
+ */
+class shopViewdPluginViewHelper extends waPluginViewHelper
 {
-    public static function productViews($product)
+    /**
+     * @param mixed $product
+     * @return string
+     */
+    public function views($product): string
     {
         $total_views = 0;
 
-        if($product !== null) {
+        if ($product !== null) {
             if (is_scalar($product) && ($product = (int)$product)) {
                 $product = new shopProduct($product);
             }
@@ -23,25 +30,53 @@ class shopViewdPluginViewHelper
 
         $template_name = 'plugin.viewd.product.html';
 
-        $file = wa('shop')->getConfig()->getPluginPath('viewd') ."/templates/$template_name";
+        try {
+            $file = wa('shop')->getConfig()->getPluginPath('viewd') . "/templates/$template_name";
+        } catch (waException $e) {
+            return "";
+        }
 
-        if(wa()->getEnv() === 'frontend' && ($theme = waRequest::getTheme())) {
-            $theme = new waTheme($theme);
-            if($theme->getFile($template_name)) {
-                $file = $theme->getPath() . "/$template_name";
+        try {
+            if (wa()->getEnv() === 'frontend' && ($theme = waRequest::getTheme())) {
+                $theme = new waTheme($theme);
+                if ($theme->getFile($template_name)) {
+                    $file = $theme->getPath() . "/$template_name";
+                }
             }
+        } catch (waException $e) {
+            // do nothing
         }
 
-        $view = wa('shop')->getView();
-        $view->assign('total_views', $total_views);
-        if(!$view->getVars('product')) {
-            $view->assign('product', $product);
+        try {
+            $view = wa('shop')->getView();
+            $view->assign('total_views', $total_views);
+            if (!$view->getVars('product')) {
+                $view->assign('product', $product);
+            }
+
+            waSystem::pushActivePlugin('viewd');
+            $result = $view->fetch($file);
+            waSystem::popActivePlugin();
+        } catch (Exception $e) {
+            $result = '';
         }
 
-        waSystem::pushActivePlugin('viewd');
-        $result = $view->fetch($file);
-        waSystem::popActivePlugin();
         return $result;
+    }
 
+    /**
+     * Обёртка для устаревших версий Shop-Script и уже установленных плагинов
+     *
+     * @param mixed $product id или объект/массив товара
+     * @return string
+     */
+    public static function productViews($product): string
+    {
+        try {
+            return (new shopViewdPluginViewHelper(wa('shop')->getPlugin('viewd'), 'viewd'))
+                ->views($product);
+        } catch (waException $e) {
+            return "";
+        }
     }
 }
