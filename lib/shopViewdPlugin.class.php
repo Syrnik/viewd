@@ -96,4 +96,39 @@ JS;
 
         return ['toolbar_section' => "<script>\n$js\n</script>"];
     }
+
+    /**
+     * @param $params
+     * @return string[]
+     */
+    public function hookBackendProdContent($params): array
+    {
+        $content_id = ifset($params, 'content_id', '');
+        $product = ifset($params, 'product', '');
+
+        try {
+            if (($content_id === 'prices') && ($product instanceof shopProduct) && $product->id) {
+                $views = (int)$product->total_views;
+                if ($views)
+                    $views = _wp("Просмотров карточки товара: ") . "<b>$views</b>";
+                else $views = _wp("Просмотров карточки товара пока не было");
+                $header = _wp("Количество просмотров карточки товара");
+                $content = <<<HTML
+<div class="s-content-section s-content-section__viewd">
+    <div class="s-section-header">
+        <h4 class="s-title">$header</h4>        
+    </div>
+    <div class="s-section-body">
+        <p>$views</p>
+    </div>
+</div>
+HTML;
+                return ['bottom' => $content];
+            }
+        } catch (Exception $e) {
+            //do nothing
+        }
+
+        return [];
+    }
 }
