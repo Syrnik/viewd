@@ -2,9 +2,12 @@
 /**
  * @author Serge Rodovnichenko <serge@syrnik.com>
  * @copyright Serge Rodovnichenko, 2019
- * @license
+ * @license Webasyst
  */
 
+/**
+ * Class shopViewdPluginFrontendPingController
+ */
 class shopViewdPluginFrontendPingController extends waJsonController
 {
     /**
