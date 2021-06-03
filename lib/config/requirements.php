@@ -6,5 +6,5 @@
  */
 
 return array(
-    'php' => ['version' => '>=5.6.0', 'strict' => true],
+    'php' => ['version' => '>=7.2.0', 'strict' => true],
 );
