@@ -30,5 +30,8 @@ return array(
     '.git',
     'composer.json',
     'composer.lock',
-    'lib/vendors/bin'
+    'lib/vendors/bin',
+    '.github/*',
+    'compress-app-plugin.php',
+    '.editorconfig',
 );
