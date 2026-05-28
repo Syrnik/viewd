@@ -1,8 +1,6 @@
-{if $total_views}
-    <div class="viewd_plugin">
-        <span class="viewd_plugin__views-icon" style="display: inline-block;background: transparent 50% no-repeat;background-size: contain;font-size: 1em; line-height: 1em;vertical-align: -0.15em;text-align: center;width: 1em;height: 1em;"><svg style="max-height: 100%;max-width: 100%" width="556.78113" height="358.39999" viewBox="0 0 17.39941 11.2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg width="556.78113" height="358.39999" viewBox="0 0 17.39941 11.2" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="m 1.40484,5.6 c 1.45783,2.2936 3.75157,4.4 7.29487,4.4 3.5433,0 5.8371,-2.1064 7.2949,-4.4 -1.4578,-2.2936 -3.7516,-4.4 -7.2949,-4.4 -3.5433,0 -5.83704,2.1064 -7.29487,4.4 z M 0.18522,5.2913 C 1.73945,2.70093 4.4015,0 8.69971,0 c 4.2982,0 6.9603,2.70093 8.5145,5.2913 L 17.39941,5.6 17.21421,5.9087 C 15.66001,8.4991 12.99791,11.2 8.69971,11.2 4.4015,11.2 1.73945,8.4991 0.18522,5.9087 L 0,5.6 Z M 8.69971,2.5 c -1.7121,0 -3.1,1.3879 -3.1,3.1 0,1.7121 1.3879,3.1 3.1,3.1 1.7121,0 3.1,-1.3879 3.1,-3.1 0,-1.7121 -1.3879,-3.1 -3.1,-3.1 z" fill="currentColor"/>
-</svg></span>
-        [`Всего просмотров этой страницы:`] <span class="viewd_plugin__counter">{$total_views}</span>
-    </div>
-{/if}
+</svg>
