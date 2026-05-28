@@ -37,7 +37,8 @@ class shopViewdPlugin extends shopPlugin
 
         $id = $product['id'];
         $url = wa()->getRouteUrl('shop/frontend/ping', ['plugin' => 'viewd']);
-        $static_url = wa()->getAppStaticUrl('shop') . 'plugins/viewd/js/viewd' . (waSystemConfig::isDebug() ? '' : '.min') . '.js';
+        $static_url = wa()->getAppStaticUrl('shop') . 'plugins/viewd/js/viewd' . (waSystemConfig::isDebug(
+            ) ? '' : '.min') . '.js';
 
         // @formatter:off
         $js = <<<JS
@@ -109,14 +110,16 @@ JS;
         try {
             if (($content_id === 'prices') && ($product instanceof shopProduct) && $product->id) {
                 $views = (int)$product->total_views;
-                if ($views)
+                if ($views) {
                     $views = _wp("Просмотров карточки товара: ") . "<b>$views</b>";
-                else $views = _wp("Просмотров карточки товара пока не было");
+                } else {
+                    $views = _wp("Просмотров карточки товара пока не было");
+                }
                 $header = _wp("Количество просмотров карточки товара");
                 $content = <<<HTML
 <div class="s-content-section s-content-section__viewd">
     <div class="s-section-header">
-        <h4 class="s-title">$header</h4>        
+        <h4 class="s-title">$header</h4>
     </div>
     <div class="s-section-body">
         <p>$views</p>

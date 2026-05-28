@@ -23,7 +23,7 @@ class shopViewdPluginViewHelper extends waPluginViewHelper
                 $product = new shopProduct($product);
             }
 
-            if (is_array($product) || (is_object($product) && ($product instanceof ArrayAccess))) {
+            if (is_array($product) || ($product instanceof ArrayAccess)) {
                 $total_views = (int)ifset($product, 'total_views', 0);
             }
         }
