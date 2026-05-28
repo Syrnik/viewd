@@ -16,6 +16,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Minimum required PHP version raised from 7.2 to 7.4
 - Webasyst Installer 3.0 or later is now required
+- Setting `frontend_product` changed from a checkbox to a radio group with three options:
+  "Sidebar (frontend_product.block_aux)", "Product menu area (frontend_product.menu)",
+  and "Disabled". Existing saved value `1` is treated as `block_aux` (no migration needed).
 
 ## [1.1.0] - 2021-06-07
 

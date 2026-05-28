@@ -18,9 +18,13 @@ A view is recorded via an AJAX request sent from the product page after it finis
 
 ## Settings
 
-The plugin has one setting — **"Default display on product page"**.
+The plugin has one setting — **"Display on product page"** — which controls where the view counter appears in the standard template locations:
 
-When enabled, the counter is rendered via the `frontend_product.block_aux` hook (product page sidebar). Disable it if you want to place the counter somewhere else in the template manually.
+| Value | Description |
+|-------|-------------|
+| **Sidebar** | Rendered via the `frontend_product.block_aux` hook (product page sidebar) |
+| **Product menu area** | Rendered via the `frontend_product.menu` hook |
+| **Disabled** | Counter is not rendered automatically; use the helper to place it manually in your template |
 
 ## Manual output
 

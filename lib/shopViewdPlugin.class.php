@@ -65,11 +65,15 @@ JS;
      */
     public function hookFrontendProduct($product): ?array
     {
-        if (!$this->getSettings('frontend_product')) {
+        $location = $this->getSettings('frontend_product');
+        if ($location == 1) {
+            $location = 'block_aux';
+        }
+        if (empty($location)) {
             return null;
         }
 
-        return ['block_aux' => shopViewdPluginViewHelper::productViews($product)];
+        return [$location => shopViewdPluginViewHelper::productViews($product)];
     }
 
     /**
