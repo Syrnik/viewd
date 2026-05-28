@@ -2,6 +2,7 @@
 return array(
     './README.md',
     './CHANGELOG.md',
+    './CLAUDE.md',
     './CONTRIBUTING.md',
     './LICENSE',
     'contributors.txt',
