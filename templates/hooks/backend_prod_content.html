@@ -1,0 +1,17 @@
+<div class="s-content-section s-content-section__viewd" id="viewd-section" data-product-id="{$product_id|escape}">
+    <div class="s-section-header">
+        <h4 class="s-title">{$header|escape}</h4>
+    </div>
+    <div class="s-section-body">
+        <p>
+            {$label} <span class="editable viewd-counter" style="cursor:pointer">{$views|escape}</span>
+            <span class="viewd-edit-wrap" style="display:none">
+                <input type="number" class="viewd-counter-input" value="{$views|escape}" min="0" style="width:80px">
+                <button class="button green viewd-save"><i class="fas fa-check"></i></button>
+                <button class="button nobutton viewd-cancel"><i class="fas fa-times"></i></button>
+            </span>
+        </p>
+    </div>
+</div>
+
+<script src="{$wa_app_static_url}plugins/viewd/js/backend_prod.js?v={$wa->shop->viewdPlugin->version()}"></script>

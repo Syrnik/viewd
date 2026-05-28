@@ -13,6 +13,7 @@ A view is recorded via an AJAX request sent from the product page after it finis
 ## Features
 
 - View counter in the Shop-Script backend — on the product editor page, "Prices, Availability, Publication" tab
+- Inline editing of the view counter by an admin directly in the backend (UI 2.0 only)
 - Optional frontend display of the counter in the product page sidebar
 - Template override support from within a storefront theme
 

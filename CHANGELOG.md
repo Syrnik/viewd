@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - LICENSE file in English and Russian
 - GitHub Actions workflows: PHP version compatibility check and automated release packaging
+- Admin can now edit the view counter inline on the product page (UI2 backend only)
 
 ### Changed
 
