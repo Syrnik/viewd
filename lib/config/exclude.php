@@ -1,9 +1,13 @@
 <?php
 return array(
-    './README.md',
-    './README.en.md',
-    './CHANGELOG.md',
-    './CLAUDE.md',
+    '*/README.md',
+    'README.md',
+    'README.en.md',
+    '*/README.en.md',
+    '*/CHANGELOG.md',
+    'CHANGELOG.md',
+    '*/CLAUDE.md',
+    'CLAUDE.md',
     './CONTRIBUTING.md',
     './LICENSE',
     'contributors.txt',
