@@ -2,7 +2,7 @@
 return array(
     'name'     => 'Количество просмотров',
     'img'      => 'img/viewd.png',
-    'version'  => '2.0.0',
+    'version'  => '2.0.1',
     'vendor'   => '670917',
     'handlers' =>
         array(
