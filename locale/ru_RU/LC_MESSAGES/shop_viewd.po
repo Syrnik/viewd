@@ -16,33 +16,56 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: .\n"
 
-#: /wa-apps/shop/plugins/viewd/templates/plugin.viewd.product.html:1
 msgid "просмотр"
 msgid_plural "просмотров"
 msgstr[0] "просмотр"
 msgstr[1] "просмотра"
 msgstr[2] "просмотров"
 
-#: /wa-apps/shop/plugins/viewd/lib/classes/shopViewdPluginFrontendPing.controller.php:52
 msgid "Дублирующийся просмотр"
 msgstr ""
 
-#: /wa-apps/shop/plugins/viewd/templates/plugin.viewd.product.html:1
 msgid "Всего просмотров этой страницы:"
 msgstr ""
 
-#: /wa-apps/shop/plugins/viewd/lib/shopViewdPlugin.class.php:73
 msgid "Просмотры за всё время"
 msgstr ""
 
-#: /wa-apps/shop/plugins/viewd/lib/config/settings.php:6
 msgid "Стандартное отображение на карточке товара"
 msgstr "Счётчик на карточке товара"
 
-#: /wa-apps/shop/plugins/viewd/lib/config/settings.php:7
 msgid "Использовать хук frontend_product.aux (штатно отображается в боковой колонке) для показа количества просмотров карточки товара. Отключите, если хотите самостоятельно отредактировать шаблон карточки товара и показывать счётчик где-то в другом месте"
 msgstr "Использовать хук <b>frontend_product.aux</b> (штатно отображается в боковой колонке) для показа количества просмотров карточки товара.<br>Отключите, если хотите самостоятельно отредактировать шаблон карточки товара и показывать счётчик где-то в другом месте"
 
-#: /wa-apps/shop/plugins/viewd/lib/config/settings.php:7
 msgid "Использовать хук frontend_product.block_aux (штатно отображается в боковой колонке) для показа количества просмотров карточки товара. Отключите, если хотите самостоятельно отредактировать шаблон карточки товара и показывать счётчик где-то в другом месте"
 msgstr "Использовать хук <b>frontend_product.block_aux</b> (штатно отображается в боковой колонке) для показа количества просмотров карточки товара.<br>Отключите, если хотите самостоятельно отредактировать шаблон карточки товара и показывать счётчик где-то в другом месте"
+
+msgid "Invalid parameters"
+msgstr ""
+
+msgid "Product not found"
+msgstr ""
+
+msgid "Отображение на карточке товара"
+msgstr ""
+
+msgid "Выберите место, где счётчик просмотров будет показываться в стандартных точках шаблона. Выберите «Выключить», чтобы использовать хелпер для ручного размещения в шаблоне."
+msgstr ""
+
+msgid "Боковая колонка (frontend_product.block_aux)"
+msgstr ""
+
+msgid "Область меню продукта (frontend_product.menu)"
+msgstr ""
+
+msgid "Выключить"
+msgstr ""
+
+msgid "Количество просмотров карточки товара"
+msgstr ""
+
+msgid "Просмотров карточки товара:"
+msgstr ""
+
+msgid "Количество просмотров"
+msgstr ""

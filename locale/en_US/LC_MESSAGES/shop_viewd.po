@@ -3,43 +3,68 @@ msgstr ""
 "Project-Id-Version: shop/plugins/viewd\n"
 "POT-Creation-Date: 2019-09-17 14:55+0300\n"
 "PO-Revision-Date: \n"
-"Last-Translator:  shop/plugins/viewd\n"
-"Language-Team:  shop/plugins/viewd\n"
+"Last-Translator: shop/plugins/viewd\n"
+"Language-Team: shop/plugins/viewd\n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 3.9\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: .\n"
 
-#: /wa-apps/shop/plugins/viewd/templates/plugin.viewd.product.html:1
 msgid "просмотр"
 msgid_plural "просмотров"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "view"
+msgstr[1] "views"
 
-#: /wa-apps/shop/plugins/viewd/lib/classes/shopViewdPluginFrontendPing.controller.php:52
 msgid "Дублирующийся просмотр"
-msgstr ""
+msgstr "Duplicate view"
 
-#: /wa-apps/shop/plugins/viewd/templates/plugin.viewd.product.html:1
 msgid "Всего просмотров этой страницы:"
-msgstr ""
+msgstr "Total views of this page:"
 
-#: /wa-apps/shop/plugins/viewd/lib/shopViewdPlugin.class.php:73
 msgid "Просмотры за всё время"
-msgstr ""
+msgstr "Total views"
 
-#: /wa-apps/shop/plugins/viewd/lib/config/settings.php:6
 msgid "Стандартное отображение на карточке товара"
-msgstr ""
+msgstr "Standard display on the product profile"
 
-#: /wa-apps/shop/plugins/viewd/lib/config/settings.php:7
 msgid "Использовать хук frontend_product.aux (штатно отображается в боковой колонке) для показа количества просмотров карточки товара. Отключите, если хотите самостоятельно отредактировать шаблон карточки товара и показывать счётчик где-то в другом месте"
-msgstr ""
+msgstr "Use the frontend_product.aux hook (normally displayed in the side column) to display the number of product card views. Disable it if you want to edit the product card template yourself and display the tag somewhere else"
 
-#: /wa-apps/shop/plugins/viewd/lib/config/settings.php:7
 msgid "Использовать хук frontend_product.block_aux (штатно отображается в боковой колонке) для показа количества просмотров карточки товара. Отключите, если хотите самостоятельно отредактировать шаблон карточки товара и показывать счётчик где-то в другом месте"
-msgstr ""
+msgstr "Use the frontend_product.block_aux hook (normally displayed in the side column) to show the number of product card views. Disable it if you want to edit the product card template yourself and display the tag somewhere else"
+
+msgid "Invalid parameters"
+msgstr "Invalid parameters"
+
+msgid "Product not found"
+msgstr "Product not found"
+
+msgid "Отображение на карточке товара"
+msgstr "Display on the product card"
+
+msgid "Выберите место, где счётчик просмотров будет показываться в стандартных точках шаблона. Выберите «Выключить», чтобы использовать хелпер для ручного размещения в шаблоне."
+msgstr "Select the location where the pageview counter will be displayed at the standard points of the template. Select \"Switch Off\" to use the helper for manual placement in the template."
+
+msgid "Боковая колонка (frontend_product.block_aux)"
+msgstr "Side column (frontend_product.block_aux)"
+
+msgid "Область меню продукта (frontend_product.menu)"
+msgstr "Product menu area (frontend_product.menu)"
+
+msgid "Выключить"
+msgstr "Switch off"
+
+msgid "Количество просмотров карточки товара"
+msgstr "Product views counter"
+
+msgid "Просмотров карточки товара:"
+msgstr "Product views:"
+
+msgid "Количество просмотров"
+msgstr "Product views counter"
