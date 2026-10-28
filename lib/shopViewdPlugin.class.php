@@ -103,6 +103,27 @@ JS;
     }
 
     /**
+     * Handler for backend_prod hook
+     *
+     * The script is attached to the product page layout: backend_prod_content
+     * blocks are compiled by Vue, which strips <script> tags from templates.
+     *
+     * @param $params
+     * @return string[]
+     */
+    public function hookBackendProd($params): array
+    {
+        $product = ifset($params, 'product', null);
+        if (!($product instanceof shopProduct) || !$product->id) {
+            return [];
+        }
+
+        $src = $this->getPluginStaticUrl() . 'js/backend_prod.js?v=' . $this->getVersion();
+
+        return ['bottom' => '<script src="' . htmlspecialchars($src) . '"></script>'];
+    }
+
+    /**
      * @param $params
      * @return string[]
      */

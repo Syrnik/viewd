@@ -7,6 +7,7 @@ return array(
     'handlers' =>
         array(
             'backend_product'      => 'hookBackendProduct',
+            'backend_prod'         => 'hookBackendProd',
             'backend_prod_content' => 'hookBackendProdContent',
             'frontend_head'        => 'hookFrontendHeadProduct',
             'frontend_product'     => 'hookFrontendProduct'

@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Fixed
+
+- Vue warning about a `<script>` tag on the product page in the UI 2.0 backend: the view counter editor script is now attached via the `backend_prod` hook instead of the `backend_prod_content` template
+
 ## [2.0.2] - 2026-05-30
 
 ### Changed

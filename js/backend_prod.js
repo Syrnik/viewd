@@ -1,20 +1,21 @@
 (function($){
-    const $prices_section = $('.js-product-prices-section').first();
     const ns = '.viewd';
+    const section = '#viewd-section';
 
-    $prices_section.off(ns)
-        .on(`click${ns}`, '.viewd-counter', function () {
+    // The prices section is (re)rendered by Vue after this script runs, so handlers are delegated from document
+    $(document).off(ns)
+        .on(`click${ns}`, `${section} .viewd-counter`, function () {
         const $span = $(this);
         const $wrap = $span.closest('p').find('.viewd-edit-wrap');
         $wrap.find('.viewd-counter-input').val($span.text().trim());
         $span.hide();
         $wrap.show();
         $wrap.find('.viewd-counter-input').trigger('focus');
-    }).on(`click${ns}`, '.viewd-cancel', function () {
+    }).on(`click${ns}`, `${section} .viewd-cancel`, function () {
         const $wrap = $(this).closest('.viewd-edit-wrap');
         $wrap.hide();
         $wrap.closest('p').find('.viewd-counter').show();
-    }).on(`click${ns}`, ' .viewd-save', function () {
+    }).on(`click${ns}`, `${section} .viewd-save`, function () {
         const $save = $(this);
         const $wrap = $save.closest('.viewd-edit-wrap');
         const $cancel = $wrap.find('.viewd-cancel');
@@ -22,7 +23,7 @@
         const $span = $wrap.closest('p').find('.viewd-counter');
         $save.prop('disabled', true);
         $cancel.prop('disabled', true);
-            const $viewd_section = $('#viewd-section');
+        const $viewd_section = $save.closest(section);
         $.post('?plugin=viewd&action=set', {product_id: $viewd_section.data('product-id'), views: $input.val()})
             .done(function (r) {
                 if (r && r.status === 'ok') {
